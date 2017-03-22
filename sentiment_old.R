@@ -160,49 +160,4 @@ AGG2$con <-  AGG2$con / AGG2$total
 AGG2$sup <-  AGG2$sup / AGG2$total
 AGG2$int <-  AGG2$int / AGG2$total
 
-save.image(file="C:/Users/KIC/Desktop/DBR.RData")
-write.csv(AGG2, "C:/Users/KIC/Desktop/sentiment_matrix.csv")
-
-########################################### FOG #############################################
-
-install.packages("koRpus")
-install.packages("tm")
-require(koRpus)
-require(tm)
-
-setwd("C:/Users/KIC/Desktop/Barc2/2)")
-
-folder <- "C:/Users/KIC/Desktop/Barc2/2)"
-myfiles <- list.files(path=folder, pattern="pdf", full.names=TRUE)
-lapply(myfiles, function(i) system(paste('"C:/Windows/system32/pdftotext.exe"', paste0('"',i,'"')), wait = FALSE) )
-mytxtfiles <- list.files(path=folder, pattern="txt", full.names=TRUE)
-abstracts <- lapply(mytxtfiles, function(i) {
-  j <- paste0(scan(i, what=character()), collapse=" ")
-  regmatches(j, gregexpr("(?<=Abstract).*?(?=Introdunction)", j, perl=TRUE))
-})
-txtfiles <- list.files(folder, pattern="*.txt", full.names=TRUE) 
-
-fw <- read.csv("C:/Users/KIC/Desktop/JPMINITXT/financialwords.csv", header=F) # financial words
-for (j in 1:length(txtfiles)) {
-  g1 <- as.character(readLines(txtfiles[j])); 
-  result <- NULL; 
-  a <- g1; 
-  for (i in 1:nrow(fw)) {
-    a <- gsub(fw[i,1], "a", a);
-    result <- a;
-    i <- i+1
-  }; 
-  write.table(result,txtfiles[j], sep="\t")
-  j <- j+1
-}
-
-# Modified FOG Index 
-directory2 <- "C:/Users/KIC/Desktop/Barc2/2"
-filenames2<- list.files(directory2, pattern="*.txt", full.names = TRUE)
-mat2 <-NULL
-for (i in 1:length(filenames2))
-{  a2 <- (FOG(tokenize(filenames2[i], lang="en")))@FOG$FOG
-   mat2 <- cbind(mat2, a2)
-   i <- i+1
-}
 
