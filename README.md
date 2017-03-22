@@ -1,1 +1,1 @@
-# js
+# mostly about Natural Language Processing.
