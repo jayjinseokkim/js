@@ -15,7 +15,7 @@ for text in wiki.get_texts():
 
   output.write(article + "\n")
   i = i + 1
-  if (i % 1000 == 0):
+  if (i % 5000 == 0):
     print("Saved " + str(i) + " articles")
 
  # if (i == 20000):
