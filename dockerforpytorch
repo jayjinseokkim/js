@@ -1,0 +1,5 @@
+docker pull edgarriba/pytorch
+
+docker run -v c:/users/jins_desktop/git:/git edgarriba/pytorch
+
+docker run -it -v c:/users/jins_desktop/git:/git edgarriba/pytorch /bin/sh
