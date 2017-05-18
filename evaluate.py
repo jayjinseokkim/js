@@ -38,9 +38,9 @@ def test(model,positive,negative,test_words):
 from gensim.models import Word2Vec
 model = Word2Vec.load('wiki.en.word2vec.model')
 
-positive_words = ["samsung","usa"]
+positive_words = ["",""]
 
-negative_words = ["korea"]
+negative_words = [""]
 
 # Test Word2vec
 print("Testing Word2vec")
@@ -53,45 +53,3 @@ test(model,positive_words,negative_words,model.wv.vocab)
 # test(model,positive_words,negative_words,model.words)
 
 
-
-
-
-positive_words = ["redundant"]
-
-negative_words = []
-
-# Test Word2vec
-print("Testing Word2vec")
-#model = word2vec.getModel()
-test(model,positive_words,negative_words,model.wv.vocab)
-
-
-
-
-#tensorboard monitor.
-
-#due to pdf extract issue.
-tpage = open('firstsample.txt', 'r').read()
-
-
-tpage = tpage.decode('utf-8')
-tpage = tpage.lower()
-
-
-# In[12]:
-
-brknm = ['deutsche bank', 'bank of america', 'reuters','bloomberg','exchange','bnp','paribas'
-         ,'ticker','market','markets','research','company','update']
-    
-for nm in brknm:
-    tpage = re.sub(nm, '', tpage, flags=re.I)
-
-
-# In[13]:
-
-seplist =[]
-#seplist.append('Important Disclosures')
-seplist.append('disclaimers and disclosures')  ## better be lowercase.
-
-for sep in seplist:
-  tpage = tpage.split(sep, 1)[0]
