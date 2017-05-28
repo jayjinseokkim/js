@@ -45,7 +45,7 @@ model = Word2Vec(LineSentence(inp), sg = 1, # 0=CBOW , 1= SkipGram
 	     size=size, window=window, min_count=min_count, workers=multiprocessing.cpu_count())
 
 # trim unneeded model memory = use (much) less RAM
-model.init_sims(replace=True)
+model.init_sims(replace=False) #True
 
 print(time.time()-start)
 
