@@ -28,7 +28,7 @@ print('took %.2f seconds to run.' %(time()-start))
 
 with open("online_train_textdata_702", "w", encoding = 'UTF-8') as text_file:
   print(sentences, file = text_file)
-sentences = []
+sentences = ""
 
 
 from gensim.corpora import WikiCorpus
