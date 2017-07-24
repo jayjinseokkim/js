@@ -8,5 +8,5 @@
 
 ###### Things to notice when setting up investment model
 - Market is more efficient than you think. It means that you need to be extremely cautious about overfitting (or data mining threat). Past performance does not guarantee future performance at all in financial market.
-- Therefore, naive approach such as grouping positive or negative sentiment would not work well out-of-sample.
+- Therefore, naive approach such as grouping positive or negative sentiment names would not work well out-of-sample.
 - You should have simple and intuitive idea.
