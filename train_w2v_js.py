@@ -35,7 +35,7 @@ import time
 language_code = "en"
 inp = "wiki.{}.text".format(language_code)
 out_model = "wiki.{}.word2vec.model".format(language_code)
-size = 300
+size = 300   #or 800d
 window = 5
 min_count = 5
 
