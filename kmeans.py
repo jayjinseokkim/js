@@ -9,6 +9,7 @@ from helper_functions import image_to_matrix, matrix_to_image, \
 
 warnings.simplefilter(action="ignore", category=FutureWarning)
 
+
 def k_means_cluster(image_values, k=3, initial_means=None):
 
     import random
