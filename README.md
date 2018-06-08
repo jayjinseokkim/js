@@ -1,7 +1,14 @@
-###### Natural Language Processing for sentiment analysis in equity market
+Philip Hsin
 
-1. initial embedding matrix training via skip-gram word2vec by utilizing wikipedia dataset
-2. online training through a ton of text articles to help the embedding matrix update up-to-date sentiment or information (*)
-3. apply investment idea 
-4. execute on internal investment process
+Managing Director
+
+Head of Asia Pacific ex Japan, Client Advisory Group / PGIM Institutional Relationship Group
+
+1 Raffles Place, #26-61
+
+One Raffles Place, Tower 2
+
+Singapore 048616
+
+DID: +65 6739 7218 HP: +65 9060 9749 
 
